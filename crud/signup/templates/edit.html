@@ -1,0 +1,10 @@
+<h1>Write Your Information</h1>
+
+<form action="{% url 'update' signup.id %}" method="post">
+    {% csrf_token %}
+    <p>이름: <input type="text" name="name" value="{{signup.name}}"></p>
+    <p>나이: <input type="text" name="age" value="{{signup.age}}"></p>
+    <p>이메일:<input type="text" name="email" value="{{signup.email}}"></p>
+    자기소개: <textarea name="body" cols="30" rows="10">{{signup.body}}</textarea>
+    <button type="submit">Submit</button>
+</form>

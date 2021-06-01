@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup DETAIL</title>
+    <style>
+        body {text-align: center;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        이름:{{signup.name}}<br>
+        나이: {{signup.age}}<br>
+        날짜: {{signup.pub_date}}<br><hr>
+        이메일: {{signup.email}}<br>
+        {{signup.introduce}}
+    </div>
+    <a href="{% url 'edit' signup.id %}">Edit</a>
+    <a href="{% url 'delete' signup.id %}">Delete</a>
+    <a href="{%url 'home'%}">메인 페이지로 돌아가기</a>
+</body>
+</html>
